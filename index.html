@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanikava Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="animated-bg"></div>   <!-- Three.js Canvas -->
+  <div id="anime-dots"></div>   <!-- Anime.js Dots -->
+
+  <header>
+    <img id="avatar" src="" alt="Avatar" />
+    <h1 id="username" class="neon-rainbow">Sanikava</h1>
+    <p id="bio" class="neon-rainbow"></p>
+    <nav>
+      <a href="#about" class="neon-rainbow">About</a>
+      <a href="resume/index.html" class="neon-rainbow">Resume</a>
+      <a href="#projects" class="neon-rainbow">Projects</a>
+      <a href="#blog" class="neon-rainbow">Blog</a>
+      <a href="#contact" class="neon-rainbow">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2 class="neon-rainbow">About Me</h2>
+      <p id="about-text" class="neon-rainbow">
+        Hi! I'm Sanikava, a developer passionate about Discord bots, chat apps, AI, and creative projects.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 class="neon-rainbow">My GitHub Projects</h2>
+      <div id="repo-list">Loading projects...</div>
+    </section>
+
+    <section id="blog">
+      <h2 class="neon-rainbow">Blog</h2>
+      <div id="blog-posts"></div>
+    </section>
+
+    <section id="contact">
+      <h2 class="neon-rainbow">Contact & Links</h2>
+      <ul>
+        <li><a href="https://github.com/sanikava" target="_blank" class="neon-rainbow">GitHub</a></li>
+        <li><a href="mailto:sanikava.india@gmail.com" class="neon-rainbow">Email</a></li>
+        <!-- Add more links if needed -->
+      </ul>
+      <!-- <form id="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="neon-rainbow">Send</button>
+        <span id="form-status" class="neon-rainbow"></span>
+      </form> -->
+      <form id="contact-form">
+        <input type="hidden" name="Date" id="form-date">
+  <input type="text" name="Name" required>
+  <input type="email" name="Email" required>
+  <textarea name="Message" required></textarea>
+  <button type="submit">Send</button>
+  <span id="form-status"></span>
+</form>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
