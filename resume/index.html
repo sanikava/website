@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanikava | Resume & Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanikava - Web Developer, Chatbot Creator, Creative Technologist. Projects, resume, GitHub and npm portfolio.">
+  <meta name="keywords" content="Sanikava, Web Developer, Chatbot, JavaScript, Node.js, Discord.js, Portfolio, Resume, npm, GitHub">
+  <meta property="og:title" content="Sanikava | Resume & Portfolio">
+  <meta property="og:description" content="Web Developer, Chatbot Creator, Creative Technologist. See my projects and skills.">
+  <meta property="og:url" content="https://sanikava.github.io/resume">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/sanikava">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sanikava | Resume & Portfolio">
+  <meta name="twitter:description" content="Web Developer, Chatbot Creator, Creative Technologist. See my projects and skills.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/sanikava">
+  <link rel="canonical" href="https://sanikava.github.io/resume">
+  <style>
+    @keyframes neon-rainbow {
+      0%   { color: #ff00cc; text-shadow: 0 0 8px #ff00cc,0 0 20px #ff00cc,0 0 40px #ff00cc;}
+      20%  { color: #00ffe7; text-shadow: 0 0 8px #00ffe7,0 0 20px #00ffe7,0 0 40px #00ffe7;}
+      40%  { color: #00ff22; text-shadow: 0 0 8px #00ff22,0 0 20px #00ff22,0 0 40px #00ff22;}
+      60%  { color: #ffea00; text-shadow: 0 0 8px #ffea00,0 0 20px #ffea00,0 0 40px #ffea00;}
+      80%  { color: #00c6ff; text-shadow: 0 0 8px #00c6ff,0 0 20px #00c6ff,0 0 40px #00c6ff;}
+      100% { color: #ff00cc; text-shadow: 0 0 8px #ff00cc,0 0 20px #ff00cc,0 0 40px #ff00cc;}
+    }
+    .neon {
+      animation: neon-rainbow 2.5s linear infinite;
+    }
+    body {
+      background: radial-gradient(circle at 60% 20%, #23203b 0%, #181818 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      min-height: 100vh;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 760px;
+      margin: 3rem auto;
+      background: rgba(30, 30, 30, 0.92);
+      border-radius: 22px;
+      box-shadow: 0 12px 32px #0008;
+      padding: 2.5rem 2.2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: none;}
+    }
+    h1, h2, h3 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin-bottom: 0.6em;
+    }
+    h1 {
+      font-size: 2.6em;
+      letter-spacing: 2px;
+      margin-top: 0;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.45em;
+      margin-top: 2em;
+      margin-bottom: 0.9em;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.18em;
+      margin-bottom: 0.5em;
+      margin-top: 1.2em;
+      font-weight: 500;
+    }
+    .profile {
+      text-align: center;
+      margin-bottom: 2.5em;
+    }
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      border: 2.5px solid #fff;
+      margin-bottom: 1.2em;
+      box-shadow: 0 0 28px #00ffe7;
+    }
+    .contact {
+      margin-top: 0.6em;
+      font-size: 1.09em;
+      letter-spacing: 0.5px;
+      opacity: 0.95;
+    }
+    a {
+      color: #00ffe7;
+      text-decoration: none;
+      transition: color 0.2s;
+      word-break: break-all;
+    }
+    a:hover {
+      color: #ff00cc;
+      text-shadow: 0 0 8px #ff00cc;
+    }
+    ul.skills, ul.hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 1em 0 0 0;
+      padding: 0;
+      gap: 0.8em;
+    }
+    ul.skills li, ul.hobbies li {
+      background: linear-gradient(90deg, #ff00cc44 0%, #00ffe744 100%);
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.3em 0.8em;
+      font-size: 1em;
+      box-shadow: 0 0 8px #00ffe7;
+      margin-bottom: 0.6em;
+      animation: neon-rainbow 2.5s linear infinite;
+      animation-delay: calc(var(--i) * 0.2s);
+    }
+    .section {
+      margin-bottom: 2em;
+    }
+    .proj-list, .npm-list {
+      padding-left: 1em;
+      margin-top: 0.5em;
+    }
+    .proj-list li, .npm-list li {
+      margin-bottom: 0.8em;
+      line-height: 1.6;
+    }
+    .edu-list {
+      margin: 0.5em 0 0 0;
+      padding-left: 1em;
+    }
+    .edu-list li {
+      margin-bottom: 0.6em;
+    }
+    .blog-list {
+      margin: 0.3em 0 0 0;
+      padding-left: 1em;
+    }
+    .blog-list li {
+      margin-bottom: 0.7em;
+      font-size: 1.06em;
+    }
+    .faq-list {
+      margin-top: 0.7em;
+      padding-left: 1em;
+    }
+    .faq-list li {
+      margin-bottom: 0.8em;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1.1rem 0.5rem;}
+      h1 { font-size: 2em; }
+      ul.skills, ul.hobbies { gap: 0.6em; }
+    }
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #ff00cc, #00ffe7, #ffea00);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 2;
+      box-shadow: 0 0 16px #fff, 0 0 28px #00ffe7;
+      animation: sparkle-move 2s infinite ease-in-out;
+    }
+    @keyframes sparkle-move {
+      0%,100% { transform: scale(1);}
+      50% { transform: scale(1.6);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="https://avatars.githubusercontent.com/sanikava" alt="Sanikava" class="avatar"/>
+      <h1 class="neon">Sanikava</h1>
+      <div class="contact">
+        Web Developer, Chatbot Creator, Creative Technologist, Anime Lover, AI/ML explorer, Currently Learning C, Java, Go<br>
+        <span>Email:</span> <a href="mailto:sanikava.india@gmail.com">sanikava.india@gmail.com</a> |
+        <span>GitHub:</span> <a href="https://github.com/sanikava" target="_blank">sanikava</a>
+        <br>
+        <span>npm:</span> <a href="https://www.npmjs.com/~sanikava" target="_blank">sanikava</a>
+        <br>
+        Location: India
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">Professional Summary</h2>
+      <p>
+        Innovative developer with a passion for building web applications, chatbots, and creative digital experiences.<br>
+        Experienced in JavaScript, Node.js, Discord bot development, and front-end frameworks.<br>
+        Skilled at blending code, design, and automation for engaging user interactions.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">Hobbies</h2>
+      <ul class="hobbies">
+        <li style="--i:1">Watching anime</li>
+        <li style="--i:2">Reading Manga</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">Skills</h2>
+      <ul class="skills">
+        <li style="--i:1">JavaScript (ES6+)</li>
+        <li style="--i:2">Node.js</li>
+        <li style="--i:3">HTML5/CSS3</li>
+        <li style="--i:4">React</li>
+        <li style="--i:5">Discord.js</li>
+        <li style="--i:6">GitHub API</li>
+        <li style="--i:7">Google Sheets API</li>
+        <li style="--i:8">Shell/Bash scripting</li>
+        <li style="--i:9">Cloud Computing</li>
+        <li style="--i:10">Figma</li>
+        <li style="--i:11">UI/UX</li>
+        <li style="--i:12">Responsive Design</li>
+        <li style="--i:13">I use Arch BTW</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">GitHub Projects</h2>
+      <ul class="proj-list">
+        <li><strong>Brain-of-Viki:</strong> AI-powered chatbot and personal assistant <a href="https://github.com/sanikava/Brain-of-Viki" target="_blank">[repo]</a></li>
+        <li><strong>Discord.js Corona Bot:</strong> Real-time COVID-19 updates and fun commands for Discord <a href="https://github.com/sanikava/Discord.js-corona-bot-easy-version" target="_blank">[repo]</a></li>
+        <li><strong>EncryptenChat:</strong> End-to-end encrypted chat application <a href="https://github.com/sanikava/EncryptenChat" target="_blank">[repo]</a></li>
+        <li><strong>Portfolio Site:</strong> Modern personal website with animated backgrounds, auto-loaded GitHub projects, and Google Sheets API form (this site)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">npm Packages</h2>
+      <ul class="npm-list">
+        <li><a href="https://www.npmjs.com/package/djs-reaction-role" target="_blank"><strong>djs-reaction-role</strong></a> - djs-reaction-role made to make reaction roles easy<br>
+          <small>Latest: 1.0.2 (5 years ago)</small></li>
+        <li><a href="https://www.npmjs.com/package/sanikava-db.json" target="_blank"><strong>sanikava-db.json</strong></a> - All-device user DB; like quick.db but in json because quick.db will not work for all<br>
+          <small>Latest: 1.0.3 (4 years ago)</small></li>
+        <li><a href="https://www.npmjs.com/package/discord.js.reply" target="_blank"><strong>discord.js.reply</strong></a> - Discord new reply with one line, easy to use and cool<br>
+          <small>Latest: 1.0.2 (5 years ago)</small></li>
+        <li><a href="https://www.npmjs.com/package/opmongo" target="_blank"><strong>opmongo</strong></a> - sanikava-db.mongo for all devices, like quick.db but in MongoDB<br>
+          <small>Latest: 1.0.0-beta (4 years ago)</small></li>
+        <li><a href="https://www.npmjs.com/package/sanikava-djs" target="_blank"><strong>sanikava-djs</strong></a> - Just a module for everything, for new Discord version<br>
+          <small>Latest: 2.0.2 (4 years ago)</small></li>
+        <li><a href="https://www.npmjs.com/package/opsqlite" target="_blank"><strong>opsqlite</strong></a> - Powerful and useful db with many advanced features<br>
+          <small>Latest: 1.0.0 (4 years ago)</small></li>
+        <li><a href="https://www.npmjs.com/package/op-music" target="_blank"><strong>op-music</strong></a> - Discord Music Made Easy; example coming soon!<br>
+          <small>Latest: 1.0.0 (4 years ago)</small></li>
+      </ul>
+      <p>See all my npm packages on <a href="https://www.npmjs.com/~sanikava" target="_blank">npmjs.com/~sanikava</a></p>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">Education</h2>
+      <ul class="edu-list">
+        <li>Self-taught / Online Courses</li>
+        <li>GitHub Skills: Introduction to GitHub, Open Source, Actions</li>
+        <li>Various courses in JavaScript, Node.js, and web design</li>
+        <li>2025 - Sri Sri University (Btech CSE in AIML)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">Blog & Community</h2>
+      <ul class="blog-list">
+        <li>Blog on coding, automation, and creative technology <a href="https://github.com/sanikava" target="_blank">[GitHub]</a></li>
+        <li>Active on Discord, GitHub, and coding forums</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="neon">FAQ</h2>
+      <ul class="faq-list">
+        <li><strong>Q: How can I contact you?</strong><br>A: Use the email above or my contact form.</li>
+        <li><strong>Q: What tech do you use?</strong><br>A: Mostly JS, Node.js, and modern web tools; I also know Python and am learning C and Go.</li>
+        <li><strong>Q: Are you open for freelance?</strong><br>A: Yes! Let's connect.</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // Sparkle effect
+    function random(min, max) { return Math.random() * (max - min) + min; }
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.top = random(0, window.innerHeight * 0.85) + 'px';
+      sparkle.style.left = random(0, window.innerWidth * 0.93) + 'px';
+      sparkle.style.opacity = random(0.3,0.8);
+      sparkle.style.animationDuration = random(1.3,3) + 's';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), random(1200,4000));
+    }
+    setInterval(() => {
+      if (document.visibilityState === 'visible') createSparkle();
+    }, 420);
+  </script>
+</body>
+</html>

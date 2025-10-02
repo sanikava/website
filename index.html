@@ -2,209 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Sanikava Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>SANIKAVA</title>
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero"><h1><span>Coding With</span> <span></span>Sanikava</h1></a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger"><div class="bar"></div></div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
+  <div id="animated-bg"></div>   <!-- Three.js Canvas -->
+  <div id="anime-dots"></div>   <!-- Anime.js Dots -->
 
+  <header>
+    <img id="avatar" src="" alt="Avatar" />
+    <h1 id="username" class="neon-rainbow">Sanikava</h1>
+    <p id="bio" class="neon-rainbow"></p>
+    <nav>
+      <a href="#about" class="neon-rainbow">About</a>
+      <a href="resume/index.html" class="neon-rainbow">Resume</a>
+      <a href="#projects" class="neon-rainbow">Projects</a>
+      <a href="#blog" class="neon-rainbow">Blog</a>
+      <a href="#contact" class="neon-rainbow">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>I Am <span></span></h1>
-        <h1>Sanikava<span></span></h1>
-        <a href="#projects" type="button" class="cta">My Projects</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
+  <main>
+    <section id="about">
+      <h2 class="neon-rainbow">About Me</h2>
+      <p id="about-text" class="neon-rainbow">
+        Hi! I'm Sanikava, a developer passionate about Discord bots, chat apps, AI, and creative projects.
+      </p>
+    </section>
 
-  <!-- Service Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>Coding is Better</p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-          <h2>Web Design</h2>
-          <p>Cool websites</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-          <h2>Web Developers</h2>
-          <p>We will help you in web development</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-          <h2>Gaming</h2>
-          <p>We are also gamer</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-          <h2>Pentesting</h2>
-          <p>We will pentest for free</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Service Section -->
+    <section id="projects">
+      <h2 class="neon-rainbow">My GitHub Projects</h2>
+      <div id="repo-list">Loading projects...</div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Search Engline</h2>
-            <p>Search anything </p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 2</h1>
-            <h2>ACO - Discord Bots</h2>
-            <p>AI chatbot with music</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 3</h1>
-            <h2>Face Detection</h2>
-            <p>Face Detection in JavaScript with some APIs</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 4</h1>
-            <h2>Crypto Chat</h2>
-            <p>Chat secretly</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Projects Section -->
+    <section id="blog">
+      <h2 class="neon-rainbow">Blog</h2>
+      <div id="blog-posts"></div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./Untitled_design.png" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About<span>Us</span></h1>
-        <!--<h2>About Us</h2>-->
-        <p>We are team of developers</p>
-        <a href="./aboutus" class="cta">Read More</a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- End About Section -->
+    <section id="contact">
+      <h2 class="neon-rainbow">Contact & Links</h2>
+      <ul>
+        <li><a href="https://github.com/sanikava" target="_blank" class="neon-rainbow">GitHub</a></li>
+        <li><a href="mailto:sanikava.india@gmail.com" class="neon-rainbow">Email</a></li>
+        <!-- Add more links if needed -->
+      </ul>
+      <!-- <form id="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="neon-rainbow">Send</button>
+        <span id="form-status" class="neon-rainbow"></span>
+      </form> -->
+      <form id="contact-form">
+        <input type="hidden" name="Date" id="form-date">
+  <input type="text" name="Name" required>
+  <input type="email" name="Email" required>
+  <textarea name="Message" required></textarea>
+  <button type="submit">Send</button>
+  <span id="form-status"></span>
+</form>
+    </section>
+  </main>
 
-
-
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div><h1 class="section-title">Contact <span>info</span></h1></div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+1 234 123 1234</h2>
-            <h2>+1 234 123 1234</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>sanikava.india@gmail.com</h2>
-            <h2>hackerzero@secmail.pro</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>India</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand"><h1><span>S</span>anikava <span>S</span>ystem</h1></div>
-      <h2>I am here so why fear?</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="https://facebook.com/sanikava.india"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"/></a>
-        </div>
-        <div class="social-item">
-          <a href="https://instagram.com/sanikava.india"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"/></a>
-        </div>
-      </div>
-      <p>Copyright © 2020 SANIKAVA. All rights reserved</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
